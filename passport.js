@@ -14,7 +14,7 @@ module.exports = function(passport) {
        });
    });
 
-   passport.use('signup', new LocalStrategy({
+   /*passport.use('signup', new LocalStrategy({
        usernameField : 'email',
        passwordField : 'password',
        passReqToCallback : true
@@ -50,7 +50,7 @@ module.exports = function(passport) {
 
     });
 
-   }));
+  }));*/
 
    passport.use('login', new LocalStrategy({
         // by default, local strategy uses username and password, we will override with email

@@ -10,7 +10,7 @@ var userSchema = new mongoose.Schema({
 });
 
 userSchema.methods.generateSalt = function(){
-  return crypto.randomBytes(256).toString('hex');
+  return crypto.randomBytes(16).toString('hex');
 }
 
 userSchema.methods.generateHash = function(password,salt) {
