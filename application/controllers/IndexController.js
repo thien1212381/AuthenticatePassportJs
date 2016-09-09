@@ -1,8 +1,6 @@
 var User = require('../model/user');
 
 exports.Index = function(req,res){
-  /*backURL=req.header('Referer') || '/';
-  console.log(backURL);*/
   res.render('Index/index');
 };
 

@@ -6,6 +6,7 @@ var User = require('./application/model/user');
 var passport = require('passport');
 var flash = require('connect-flash');
 var session = require('express-session');
+var logger = require('morgan');
 require('./passport')(passport);
 
 //server start
@@ -20,6 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
+app.use(logger('dev'));
 
 //routers
 var routers = require('./router');

@@ -38,5 +38,5 @@ function isLoggedIn(req,res,next){
     if (req.isAuthenticated()){
         res.redirect('/profile');
     }
-    next();
+    return next();
 }
